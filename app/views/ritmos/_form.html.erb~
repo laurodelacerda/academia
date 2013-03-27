@@ -1,0 +1,33 @@
+<%= form_for(@ritmo) do |f| %>
+  <% if @ritmo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ritmo.errors.count, "error") %> prohibited this ritmo from being saved:</h2>
+
+      <ul>
+      <% @ritmo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quantidade %><br />
+    <%= f.number_field :quantidade %>
+  </div>
+  <div class="field">
+    <%= f.label :repeticao %><br />
+    <%= f.number_field :repeticao %>
+  </div>
+  <div class="field">
+    <%= f.label :treino %><br />
+    <%= f.text_field :treino %>
+  </div>
+  <div class="field">
+    <%= f.label :exercicio %><br />
+    <%= f.text_field :exercicio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

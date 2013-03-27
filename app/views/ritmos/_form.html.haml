@@ -1,0 +1,7 @@
+= semantic_form_for [@ritmo] do |form|
+ 
+  = form.input :quantidade, :label => 'Quantidade'
+  = form.input :repeticao , :label => 'Repetição' 
+  = form.input :treino, :member_label => :objetivo, :label => 'Objetivo'
+  = form.input :exercicio, :member_label => :descricao, :label => 'Descrição'
+  = form.submit 'Salvar'

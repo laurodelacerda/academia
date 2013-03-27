@@ -1,0 +1,5 @@
+class Ritmo < ActiveRecord::Base
+  belongs_to :treino
+  belongs_to :exercicio
+  attr_accessible :quantidade, :repeticao
+end

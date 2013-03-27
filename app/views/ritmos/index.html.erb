@@ -1,0 +1,29 @@
+<h1>Listing ritmos</h1>
+
+<table>
+  <tr>
+    <th>Quantidade</th>
+    <th>Repeticao</th>
+    <th>Objetivo</th>
+    <th>Descrição</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ritmos.each do |ritmo| %>
+  <tr>
+    <td><%= ritmo.quantidade %></td>
+    <td><%= ritmo.repeticao %></td>
+    <td><%= ritmo.treino.objetivo %></td>
+    <td><%= ritmo.exercicio.descricao %></td>
+    <td><%= link_to 'Show', ritmo %></td>
+    <td><%= link_to 'Edit', edit_ritmo_path(ritmo) %></td>
+    <td><%= link_to 'Excluir', ritmo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ritmo', new_ritmo_path %>

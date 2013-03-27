@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Quantidade:</b>
+  <%= @ritmo.quantidade %>
+</p>
+
+<p>
+  <b>Repetição:</b>
+  <%= @ritmo.repeticao %>
+</p>
+
+<p>
+  <b>Objetivo:</b>
+  <%= @ritmo.treino.objetivo %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @ritmo.exercicio.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_ritmo_path(@ritmo) %> |
+<%= link_to 'Back', ritmos_path %>

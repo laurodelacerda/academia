@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data Início:</b>
+  <%= @treino.dataInicio %>
+</p>
+
+<p>
+  <b>Objetivo:</b>
+  <%= @treino.objetivo %>
+</p>
+
+<p>
+  <b>Aluno:</b>
+  <%= @treino.aluno.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_treino_path(@treino) %> |
+<%= link_to 'Back', treinos_path %>
